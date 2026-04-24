@@ -1,0 +1,23 @@
+{
+  "overview": "A study reminder app where students log in, create reminders with titles, subjects, and schedules, and receive audio+visual alerts when it's time to study.",
+  "features": [
+    "Login required via Internet Identity",
+    "Create and manage study reminders with title, subject, date, time, and notes",
+    "Dashboard showing upcoming reminders with countdown timers",
+    "Audio sound alert when a reminder fires",
+    "Snooze or dismiss reminders from an alert popup",
+    "Silent mode to mute sound while keeping visual alerts",
+    "Filter and sort reminders by status",
+    "Mark reminders as completed or dismissed"
+  ],
+  "category": "productivity",
+  "tags": [
+    "study",
+    "reminders",
+    "students",
+    "audio",
+    "notifications",
+    "productivity"
+  ],
+  "last_updated": "2026-04-23T19:07:17.799Z"
+}

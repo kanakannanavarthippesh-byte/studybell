@@ -1,0 +1,36 @@
+// Version: 1.0.0
+type List__415060402<T> = List__790383201<T>;
+type List__790383201<T> =
+  {
+    var blockIndex : Nat__490723111;
+    var blocks : [var [var ?T]];
+    var elementIndex : Nat__490723111
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type ReminderId__318673956 = ReminderId__575074142;
+type ReminderId__575074142 = Nat;
+type ReminderInternal__931123710 =
+  {
+    createdAt : Timestamp__1051278931;
+    id : ReminderId__318673956;
+    var notes : ?Text;
+    owner : UserId__314672657;
+    var scheduledAt : Timestamp__1051278931;
+    var status : ReminderStatus__665405685;
+    var subject : Text;
+    var title : Text;
+    var updatedAt : Timestamp__1051278931
+  };
+type ReminderStatus__665405685 = {#completed; #dismissed; #pending};
+type Timestamp__1051278931 = Timestamp__301639476;
+type Timestamp__301639476 = Int;
+type UserId__158757552 = Principal;
+type UserId__314672657 = UserId__158757552;
+actor {
+  stable reminderState :
+    {
+      var nextId : Nat;
+      reminders : List__415060402<ReminderInternal__931123710>
+    }
+};

@@ -1,0 +1,45 @@
+type UserId = principal;
+type UpdateReminderInput = 
+ record {
+   id: ReminderId;
+   notes: opt text;
+   scheduledAt: Timestamp;
+   subject: text;
+   title: text;
+ };
+type Timestamp = int;
+type ReminderStatus = 
+ variant {
+   completed;
+   dismissed;
+   pending;
+ };
+type ReminderId = nat;
+type Reminder = 
+ record {
+   createdAt: Timestamp;
+   id: ReminderId;
+   notes: opt text;
+   owner: UserId;
+   scheduledAt: Timestamp;
+   status: ReminderStatus;
+   subject: text;
+   title: text;
+   updatedAt: Timestamp;
+ };
+type CreateReminderInput = 
+ record {
+   notes: opt text;
+   scheduledAt: Timestamp;
+   subject: text;
+   title: text;
+ };
+service : {
+  completeReminder: (id: ReminderId) -> (opt Reminder);
+  createReminder: (input: CreateReminderInput) -> (Reminder);
+  deleteReminder: (id: ReminderId) -> (bool);
+  dismissReminder: (id: ReminderId) -> (opt Reminder);
+  getReminder: (id: ReminderId) -> (opt Reminder) query;
+  listReminders: () -> (vec Reminder) query;
+  updateReminder: (input: UpdateReminderInput) -> (opt Reminder);
+}
