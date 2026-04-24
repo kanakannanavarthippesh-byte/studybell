@@ -1,2 +1,2 @@
-# studybell
-Exported from Caffeine project: StudyBell
+# reminder
+Exported from Caffeine project: reminder
